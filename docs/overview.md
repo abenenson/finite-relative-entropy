@@ -112,3 +112,10 @@ revision in the tracked Lake files, update all three pin records
 (`lakefile.lean`, `lake-manifest.json`, `verification.json`) together, and run the
 strict verifier after the dependency commit is finalized. The final verifier
 checks the dependency checkout's actual Git head against that exact pin.
+
+## Private CI dependencies
+
+The `vendor` Git bundles contain the exact private dependency commits pinned by Lake.
+The setup script verifies bundle hashes, manifest URLs/revisions, checkout identity and
+tracked cleanliness before Lean setup. CI needs no additional repository credential.
+The mathematical sources and their qualification identities are unchanged.
