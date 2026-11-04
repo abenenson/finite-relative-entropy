@@ -1,0 +1,139 @@
+{
+  "root_module": "FiniteRelativeEntropy",
+  "source_files": [
+    "FiniteRelativeEntropy/Basic.lean",
+    "FiniteRelativeEntropy/GibbsVariational.lean",
+    "FiniteRelativeEntropy/Characterization.lean",
+    "FiniteRelativeEntropy.lean",
+    "FiniteRelativeEntropyExamples/Basic.lean",
+    "FiniteRelativeEntropyExamples.lean"
+  ],
+  "audit_imports": [
+    "FiniteRelativeEntropy",
+    "FiniteRelativeEntropyExamples"
+  ],
+  "declarations": [
+    "FiniteRelativeEntropy.AdmissiblePair",
+    "FiniteRelativeEntropy.AdmissiblePair.ext",
+    "FiniteRelativeEntropy.AdmissiblePair.diagonal",
+    "FiniteRelativeEntropy.AdmissiblePair.relabel",
+    "FiniteRelativeEntropy.AdmissiblePair.compound",
+    "FiniteRelativeEntropy.AdmissibleReference",
+    "FiniteRelativeEntropy.finiteKL",
+    "FiniteMarkovKernels.ProbabilityVector.toMeasure",
+    "FiniteMarkovKernels.ProbabilityVector.toMeasure.isFiniteMeasure",
+    "FiniteMarkovKernels.ProbabilityVector.toMeasure_apply_singleton",
+    "FiniteMarkovKernels.ProbabilityVector.toMeasure_injective",
+    "FiniteRelativeEntropy.finiteKL.diagonal",
+    "FiniteRelativeEntropy.finiteKL.relabel",
+    "FiniteRelativeEntropy.finiteKL.eq_sum_klFun",
+    "FiniteRelativeEntropy.finiteKL.measurable_reference",
+    "FiniteRelativeEntropy.finiteKL.compound",
+    "FiniteRelativeEntropy.finiteKL.nonneg",
+    "FiniteRelativeEntropy.finiteKL.eq_toReal_klDiv",
+    "FiniteRelativeEntropy.finiteKL.klDiv_ne_top",
+    "FiniteRelativeEntropy.finiteKL.eq_zero_iff",
+    "FiniteMarkovKernels.ProbabilityVector.partitionFunction",
+    "FiniteMarkovKernels.ProbabilityVector.partitionFunction_pos",
+    "FiniteMarkovKernels.ProbabilityVector.gibbsTilt",
+    "FiniteMarkovKernels.ProbabilityVector.gibbsTilt_apply",
+    "FiniteMarkovKernels.ProbabilityVector.gibbsTilt_pos_iff",
+    "FiniteMarkovKernels.ProbabilityVector.absolutelyContinuous_gibbsTilt",
+    "FiniteMarkovKernels.ProbabilityVector.gibbsTilt_absolutelyContinuous",
+    "FiniteRelativeEntropy.finiteKL.gibbsPair",
+    "FiniteRelativeEntropy.finiteKL.gibbs_regret",
+    "FiniteRelativeEntropy.finiteKL.gibbsTilt_unique_minimizer",
+    "FiniteRelativeEntropy.RelativeEntropyFamily",
+    "FiniteRelativeEntropy.RelativeEntropyFamily.finiteKLFamily",
+    "FiniteRelativeEntropy.RelativeEntropyFamily.probePair",
+    "FiniteRelativeEntropy.RelativeEntropyFamily.probe",
+    "FiniteRelativeEntropy.RelativeEntropyFamily.probeOnIoc",
+    "FiniteRelativeEntropy.RelativeEntropyFamily.measurable_probeOnIoc",
+    "FiniteRelativeEntropy.RelativeEntropyFamily.onSupportPair",
+    "FiniteRelativeEntropy.RelativeEntropyFamily.SupportFiber",
+    "FiniteRelativeEntropy.RelativeEntropyFamily.supportFiberFintype",
+    "FiniteRelativeEntropy.RelativeEntropyFamily.supportSigmaEquiv",
+    "FiniteRelativeEntropy.RelativeEntropyFamily.supportOuterPair",
+    "FiniteRelativeEntropy.RelativeEntropyFamily.supportInnerPair",
+    "FiniteRelativeEntropy.RelativeEntropyFamily.zeroTail",
+    "FiniteRelativeEntropy.RelativeEntropyFamily.probeInnerPair",
+    "FiniteRelativeEntropy.RelativeEntropyFamily.probeCompoundPair",
+    "FiniteRelativeEntropy.RelativeEntropyFamily.probe_mul",
+    "FiniteRelativeEntropy.RelativeEntropyFamily.probe_one",
+    "FiniteRelativeEntropy.RelativeEntropyFamily.expNegIoc",
+    "FiniteRelativeEntropy.RelativeEntropyFamily.logProbeHom",
+    "FiniteRelativeEntropy.RelativeEntropyFamily.realAdditiveExtension",
+    "FiniteRelativeEntropy.RelativeEntropyFamily.probeScale",
+    "FiniteRelativeEntropy.RelativeEntropyFamily.probe_eq_neg_mul_log",
+    "FiniteRelativeEntropy.RelativeEntropyFamily.fullSupportScale",
+    "FiniteRelativeEntropy.RelativeEntropyFamily.fullSupportInnerPair",
+    "FiniteRelativeEntropy.RelativeEntropyFamily.fullSupportCompoundPair",
+    "FiniteRelativeEntropy.RelativeEntropyFamily.eq_mul_finiteKL_of_fullSupport",
+    "FiniteRelativeEntropy.RelativeEntropyFamily.characterization",
+    "FiniteRelativeEntropy.RelativeEntropyFamily.Nonnegative",
+    "FiniteRelativeEntropy.RelativeEntropyFamily.probeScale_nonneg",
+    "FiniteRelativeEntropy.Examples.fair",
+    "FiniteRelativeEntropy.Examples.boundaryPair",
+    "FiniteRelativeEntropy.Examples.boundary_numerator_true",
+    "FiniteRelativeEntropy.Examples.boundary_kl",
+    "FiniteRelativeEntropy.Examples.boundary_diagonal",
+    "FiniteRelativeEntropy.Examples.logarithmicEnergy",
+    "FiniteRelativeEntropy.Examples.logarithmic_partition",
+    "FiniteRelativeEntropy.Examples.logarithmic_tilt_false",
+    "FiniteRelativeEntropy.Examples.logarithmic_tilt_true",
+    "FiniteRelativeEntropy.Examples.minimizingPair",
+    "FiniteRelativeEntropy.Examples.logarithmic_minimum",
+    "FiniteRelativeEntropy.Examples.logarithmic_unique",
+    "FiniteRelativeEntropy.Examples.tilt_preserves_zero",
+    "FiniteRelativeEntropy.Examples.characterized_boundary",
+    "FiniteRelativeEntropy.Examples.characterized_scale_nonnegative"
+  ],
+  "examples_module": "FiniteRelativeEntropyExamples",
+  "public_dependencies": {
+    "mathlib": {
+      "rev": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+      "url": "https://github.com/leanprover-community/mathlib4"
+    },
+    "plausible": {
+      "rev": "118aa17ee84656b8bd727fef7c458ee8c833385c",
+      "url": "https://github.com/leanprover-community/plausible"
+    },
+    "LeanSearchClient": {
+      "rev": "ddf04cf3949fa556442341e87d47f9f6e6074707",
+      "url": "https://github.com/leanprover-community/LeanSearchClient"
+    },
+    "importGraph": {
+      "rev": "e928b72544873815af278d38681b31c0293588e3",
+      "url": "https://github.com/leanprover-community/import-graph"
+    },
+    "proofwidgets": {
+      "rev": "106ff4fafc74ef4ac99d81dbf3ab399118f497a5",
+      "url": "https://github.com/leanprover-community/ProofWidgets4"
+    },
+    "aesop": {
+      "rev": "355695d523e41d0554926416cba2a2b3544fbbc9",
+      "url": "https://github.com/leanprover-community/aesop"
+    },
+    "Qq": {
+      "rev": "6a489d9af5d0c47e5b259e2e8bcdfc1811b5a259",
+      "url": "https://github.com/leanprover-community/quote4"
+    },
+    "batteries": {
+      "rev": "f2effa3d803fda822b1f97b806c47cf2adfbcbc2",
+      "url": "https://github.com/leanprover-community/batteries"
+    },
+    "Cli": {
+      "rev": "e92c9f15fdfacc8536f31cfb3b7ad26c3c8cd204",
+      "url": "https://github.com/leanprover/lean4-cli"
+    },
+    "finite-markov-kernels": {
+      "rev": "de78502c3f191840bc6b3ff55d2be5e9d66ca122",
+      "url": "https://github.com/abenenson/finite-markov-kernels"
+    }
+  },
+  "dependency_modules": {
+    "finite-markov-kernels": [
+      "FiniteMarkovKernels"
+    ]
+  }
+}
