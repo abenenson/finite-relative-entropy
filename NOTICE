@@ -1,0 +1,9 @@
+finite-relative-entropy
+Copyright 2026 Adam Benenson
+
+Generic mathematical code extracted from the mathematical library.
+See ORIGIN.json for the exact source scope and provenance.
+
+The characterization theorem formalizes Tom Leinster, A short characterization
+of relative entropy (2019), Theorem II.1. Gibbs variational identities and
+Kullback--Leibler nonnegativity retain their classical mathematical attribution.

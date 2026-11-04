@@ -1,0 +1,474 @@
+{
+  "status": "passed",
+  "recorded_utc": "2026-11-04T05:34:18.059407+00:00",
+  "source_identity": "Exact authored-file, verifier and manifest hashes below; no qualification of later edits is implied.",
+  "compiler": "Lean (version 4.34.1, x86_64-unknown-linux-gnu, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)",
+  "dependency_revisions": {
+    "mathlib": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+    "plausible": "118aa17ee84656b8bd727fef7c458ee8c833385c",
+    "LeanSearchClient": "ddf04cf3949fa556442341e87d47f9f6e6074707",
+    "importGraph": "e928b72544873815af278d38681b31c0293588e3",
+    "proofwidgets": "106ff4fafc74ef4ac99d81dbf3ab399118f497a5",
+    "aesop": "355695d523e41d0554926416cba2a2b3544fbbc9",
+    "Qq": "6a489d9af5d0c47e5b259e2e8bcdfc1811b5a259",
+    "batteries": "f2effa3d803fda822b1f97b806c47cf2adfbcbc2",
+    "Cli": "e92c9f15fdfacc8536f31cfb3b7ad26c3c8cd204",
+    "finite-markov-kernels": "6f3c409965c1a9d23f870ec4f9f2de9b5b79a0f3"
+  },
+  "authored_source_sha256": {
+    "FiniteRelativeEntropy/Basic.lean": "1b706a5be04c0ce99e4fd33687b65f64fe6aed26e1c42d511e8e9a33f4c504fa",
+    "FiniteRelativeEntropy/GibbsVariational.lean": "1b734641a65585f93562a67c87dedd7017770822cfeae657c3e7a7a0ea488d44",
+    "FiniteRelativeEntropy/Characterization.lean": "9eb075bd0deb457f5e217b989b749814df84bcbab0ab96bcafd475d5d985220a",
+    "FiniteRelativeEntropy.lean": "35011de4f0c46a4e31c843d84be44cf5c7bc327cbdc17e5b7edbfbba6a560e03",
+    "FiniteRelativeEntropyExamples/Basic.lean": "863631687fd2da681519a25694be879e051ee9fcd209f60b6fc8b52a7df0bb39",
+    "FiniteRelativeEntropyExamples.lean": "8f29c633e2aaec840f2073e5ead1fb14075cbf2872298c1a76986d04dde67711"
+  },
+  "verification_program_sha256": "e141b204b2afd540d8ed799745abb4c21ae27539432675c3c0c11183384050e3",
+  "verification_controls_sha256": "7da3ed1a0ad1093d8d703c66bf371c67bea9fbd71b0ccd29284b0048a7a70475",
+  "verification_manifest_sha256": "c712aeaf93b8ca3da65b4824995fdcd5dae2fb5c40851bd32ed262fce6736076",
+  "lakefile_sha256": "6fbe01f4c3e9e706abddaeb119841e5959c3d1de9a3e9f8fb7a125139340e765",
+  "lake_manifest_sha256": "7df38c26651698c1f8c146e1b8cd16997e1c3ddb68b2a309b5a7deaaee842757",
+  "extraction_provenance_sha256": "4308bbf1d27b44445dee386c7e99c1ac1fd390952cd8d5e36e9d477cdc9a8a46",
+  "source_files": 6,
+  "explicit_public_declarations": 74,
+  "full_linters_per_source": 16,
+  "warnings_fatal": true,
+  "authored_artifacts_removed_before_build": 30,
+  "verifier_regression_controls": 14,
+  "named_transitive_axioms": {
+    "FiniteRelativeEntropy.AdmissiblePair": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.AdmissiblePair.ext": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.AdmissiblePair.diagonal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.AdmissiblePair.relabel": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.AdmissiblePair.compound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.AdmissibleReference": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.finiteKL": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteMarkovKernels.ProbabilityVector.toMeasure": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteMarkovKernels.ProbabilityVector.toMeasure.isFiniteMeasure": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteMarkovKernels.ProbabilityVector.toMeasure_apply_singleton": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteMarkovKernels.ProbabilityVector.toMeasure_injective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.finiteKL.diagonal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.finiteKL.relabel": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.finiteKL.eq_sum_klFun": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.finiteKL.measurable_reference": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.finiteKL.compound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.finiteKL.nonneg": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.finiteKL.eq_toReal_klDiv": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.finiteKL.klDiv_ne_top": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.finiteKL.eq_zero_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteMarkovKernels.ProbabilityVector.partitionFunction": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteMarkovKernels.ProbabilityVector.partitionFunction_pos": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteMarkovKernels.ProbabilityVector.gibbsTilt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteMarkovKernels.ProbabilityVector.gibbsTilt_apply": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteMarkovKernels.ProbabilityVector.gibbsTilt_pos_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteMarkovKernels.ProbabilityVector.absolutelyContinuous_gibbsTilt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteMarkovKernels.ProbabilityVector.gibbsTilt_absolutelyContinuous": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.finiteKL.gibbsPair": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.finiteKL.gibbs_regret": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.finiteKL.gibbsTilt_unique_minimizer": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.RelativeEntropyFamily": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.RelativeEntropyFamily.finiteKLFamily": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.RelativeEntropyFamily.probePair": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.RelativeEntropyFamily.probe": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.RelativeEntropyFamily.probeOnIoc": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.RelativeEntropyFamily.measurable_probeOnIoc": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.RelativeEntropyFamily.onSupportPair": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.RelativeEntropyFamily.SupportFiber": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.RelativeEntropyFamily.supportFiberFintype": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.RelativeEntropyFamily.supportSigmaEquiv": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.RelativeEntropyFamily.supportOuterPair": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.RelativeEntropyFamily.supportInnerPair": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.RelativeEntropyFamily.zeroTail": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.RelativeEntropyFamily.probeInnerPair": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.RelativeEntropyFamily.probeCompoundPair": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.RelativeEntropyFamily.probe_mul": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.RelativeEntropyFamily.probe_one": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.RelativeEntropyFamily.expNegIoc": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.RelativeEntropyFamily.logProbeHom": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.RelativeEntropyFamily.realAdditiveExtension": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.RelativeEntropyFamily.probeScale": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.RelativeEntropyFamily.probe_eq_neg_mul_log": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.RelativeEntropyFamily.fullSupportScale": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.RelativeEntropyFamily.fullSupportInnerPair": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.RelativeEntropyFamily.fullSupportCompoundPair": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.RelativeEntropyFamily.eq_mul_finiteKL_of_fullSupport": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.RelativeEntropyFamily.characterization": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.RelativeEntropyFamily.Nonnegative": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.RelativeEntropyFamily.probeScale_nonneg": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.Examples.fair": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.Examples.boundaryPair": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.Examples.boundary_numerator_true": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.Examples.boundary_kl": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.Examples.boundary_diagonal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.Examples.logarithmicEnergy": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.Examples.logarithmic_partition": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.Examples.logarithmic_tilt_false": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.Examples.logarithmic_tilt_true": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.Examples.minimizingPair": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.Examples.logarithmic_minimum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.Examples.logarithmic_unique": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.Examples.tilt_preserves_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.Examples.characterized_boundary": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FiniteRelativeEntropy.Examples.characterized_scale_nonnegative": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "stages": [
+    {
+      "name": "compiler-version",
+      "exit_code": 0
+    },
+    {
+      "name": "exact-build",
+      "exit_code": 0
+    },
+    {
+      "name": "lint-FiniteRelativeEntropy-Basic.lean",
+      "exit_code": 0
+    },
+    {
+      "name": "lint-FiniteRelativeEntropy-GibbsVariational.lean",
+      "exit_code": 0
+    },
+    {
+      "name": "lint-FiniteRelativeEntropy-Characterization.lean",
+      "exit_code": 0
+    },
+    {
+      "name": "lint-FiniteRelativeEntropy.lean",
+      "exit_code": 0
+    },
+    {
+      "name": "lint-FiniteRelativeEntropyExamples-Basic.lean",
+      "exit_code": 0
+    },
+    {
+      "name": "lint-FiniteRelativeEntropyExamples.lean",
+      "exit_code": 0
+    },
+    {
+      "name": "axioms",
+      "exit_code": 0
+    }
+  ],
+  "raw_evidence": {
+    "path": "verification-artifacts/release-20261104-2/qualification.json",
+    "sha256": "5024221a101fcb9de8eb274cbf004f7a22eab9b08da1acc42c927258169a65c4",
+    "retention": "Local raw evidence directory; this portable receipt retains source identity and audit results."
+  },
+  "resources": {
+    "phase": "entropy-verify-2",
+    "elapsed_seconds": 48.206816908999826,
+    "sampled_peak_tree_rss_bytes": 4283113472,
+    "cpu_affinity": [
+      0,
+      1
+    ],
+    "memory_ceiling_bytes": 17179869184,
+    "surviving_non_zombie_pids": [],
+    "resource_receipt_sha256": "5c6f5b155c2c5f1d9e5d45354271d14965d464daa9279b0fc44fafbeb40d224f",
+    "disk_receipt_sha256": "14eb2b1a04edb14da7a36cd3d655520862bf0e1bb94ce205a790af7d67295297"
+  },
+  "dependency_checkout_validation": "The shared finite-markov-kernels checkout was clean at exact 6f3c409965c1a9d23f870ec4f9f2de9b5b79a0f3 immediately before qualification. Dependency sources and caches were locally linked; tracked configuration contains exact GitHub URL/revision pins.",
+  "earlier_failed_attempt": {
+    "evidence": "verification-artifacts/release-20261104-1/qualification.json",
+    "failure": "Lake rejected an unescaped hyphenated package name before Lean source elaboration.",
+    "correction": "Canonical escaped Lake manifest names plus validated dependency-name normalization with collision/malformed-name regression controls. No mathematical source or check was weakened."
+  },
+  "independent_review": "Read-only Markov package maintainer review found no blocking findings; checked provenance hashes/frozen source diff, shared namespaces, hypotheses, examples and dependency pins.",
+  "remote_validation": "No fresh remote clone or hosted CI run is recorded. Creating the new remote repository was unavailable at this checkpoint because the GitHub integration returned 403."
+}
