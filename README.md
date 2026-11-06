@@ -54,19 +54,15 @@ Pinned toolchain: **Lean 4.34.1**, **Mathlib
 dependencies are exact-pinned in [lake-manifest.json](lake-manifest.json).
 
 ```bash
-python3 scripts/prepare_private_dependencies.py
 lake exe cache get
 lake --rehash --wfail build
 python3 -m unittest discover -s scripts -p 'test_*.py'
 python3 scripts/verify.py
 ```
 
-Run these commands from the checkout root. While the Markov dependency remains
-private, the preparation step restores its exact pinned commit from the bundled
-Git snapshot in `vendor/`. It checks the bundle hash and Lake URL/revision before
-materializing the checkout, so no additional repository credential is needed.
-CI runs the same preparation before Lean setup. See the
-[private dependency notes](docs/overview.md#private-ci-dependencies).
+Run these commands from the checkout root. Lake resolves the exact pinned
+dependencies from their public GitHub repositories. CI uses the same public
+dependency graph; see the [dependency notes](docs/overview.md#public-dependencies).
 
 The verifier removes only authored module artifacts before rebuilding every
 source and example, checks all 16 linters with warnings fatal, and audits each
