@@ -1,0 +1,13 @@
+{
+  "history_policy": "One rewritten commit per original commit, retaining author/committer dates, parent topology and development layers. Only identifying metadata and dependency commit identifiers were normalized.",
+  "proof_commands_unchanged": true,
+  "verification_scope": "Historical proof build and lint records retain their original scope. Python regression checks and source comparisons validate the publication cleanup; no fresh Lean build is claimed.",
+  "source_sha256": {
+    "FiniteRelativeEntropy.lean": "ffc6c3c507b076c5db5cc5c329fd681857bd1bd2d3ed722b500d91c7a87d53e5",
+    "FiniteRelativeEntropy/Basic.lean": "1b706a5be04c0ce99e4fd33687b65f64fe6aed26e1c42d511e8e9a33f4c504fa",
+    "FiniteRelativeEntropy/Characterization.lean": "9eb075bd0deb457f5e217b989b749814df84bcbab0ab96bcafd475d5d985220a",
+    "FiniteRelativeEntropy/GibbsVariational.lean": "1b734641a65585f93562a67c87dedd7017770822cfeae657c3e7a7a0ea488d44",
+    "FiniteRelativeEntropyExamples.lean": "8f29c633e2aaec840f2073e5ead1fb14075cbf2872298c1a76986d04dde67711",
+    "FiniteRelativeEntropyExamples/Basic.lean": "863631687fd2da681519a25694be879e051ee9fcd209f60b6fc8b52a7df0bb39"
+  }
+}
