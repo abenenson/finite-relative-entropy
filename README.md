@@ -1,5 +1,7 @@
 # finite-relative-entropy
 
+[![Lean verification](https://github.com/abenenson/finite-relative-entropy/actions/workflows/lean.yml/badge.svg?branch=main)](https://github.com/abenenson/finite-relative-entropy/actions/workflows/lean.yml)
+
 Finite Kullback–Leibler divergence, Gibbs variational identities, and Leinster's
 characterization of relative entropy in Lean and Mathlib.
 
