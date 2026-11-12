@@ -74,4 +74,4 @@ explicit named public declaration's transitive axioms. Only `propext`,
 These are classical mathematical results. The characterization follows Tom
 Leinster, *A short characterization of relative entropy* (2019), Theorem II.1;
 the package makes no priority claim. Apache 2.0, copyright 2026 Adam Benenson.
-See [LICENSE](LICENSE), [NOTICE](NOTICE), and [file-scoped provenance](ORIGIN.json).
+See [LICENSE](LICENSE), [NOTICE](NOTICE), and [initial public file inventory](ORIGIN.json).

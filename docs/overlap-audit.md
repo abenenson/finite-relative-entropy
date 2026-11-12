@@ -1,11 +1,8 @@
 # Mathematical attribution and Mathlib overlap
 
-The extracted source was frozen at the library commit
-`recorded-source-baseline`. [ORIGIN.json](../ORIGIN.json) lists
-the three original files, their SHA-256 hashes, the extracted paths, and the
-adaptations. The Apache 2.0 declaration applies to those generic mathematical
-files and this package's authored material. It does not infer a license for the
-surrounding repository.
+[ORIGIN.json](../ORIGIN.json) lists the initial public package paths and SHA-256
+digests for three mathematical files. The Apache 2.0 declaration applies to those
+files and this package's authored material.
 
 Finite KL nonnegativity, its chain rule, exponential tilting, and the Gibbs
 variational principle are classical. The characterization formalizes Theorem
@@ -40,4 +37,4 @@ feasibility theorem that a Gibbs tilt is absolutely continuous with respect to
 its original reference. Checked examples and build/verification infrastructure
 are new package consumers. The original proof hypotheses are retained. Git
 history and qualification source hashes record the final released form; the
-initial extraction hashes in `ORIGIN.json` identify the adaptation baseline.
+initial public file hashes in `ORIGIN.json` identify the package baseline.

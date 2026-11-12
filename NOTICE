@@ -1,8 +1,8 @@
 finite-relative-entropy
 Copyright 2026 Adam Benenson
 
-Generic mathematical code extracted from the mathematical library.
-See ORIGIN.json for the exact source scope and provenance.
+Generic mathematical code under Apache 2.0.
+See ORIGIN.json for the initial public package file inventory.
 
 The characterization theorem formalizes Tom Leinster, A short characterization
 of relative entropy (2019), Theorem II.1. Gibbs variational identities and

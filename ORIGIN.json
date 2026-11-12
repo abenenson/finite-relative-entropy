@@ -1,34 +1,25 @@
 {
   "copyright_holder": "Adam Benenson",
   "declared_source_license": "Apache-2.0",
-  "provenance_scope": "Only the three listed generic mathematical files. No license is inferred for the surrounding private the library repository. Original hashes identify the frozen source; extracted hashes identify the initial released adaptation. Later revisions are retained in Git history.",
   "files": [
     {
-      "source_file": "MathlibExtensions/InformationTheory/Finite/RelativeEntropy/Basic.lean",
-      "original_sha256": "5c90fa104e35700e40101f309a6f43d05ed71d186e8f8291e6ecb5e7f2ccb966",
       "extracted_file": "FiniteRelativeEntropy/Basic.lean",
       "extracted_sha256": "1b706a5be04c0ce99e4fd33687b65f64fe6aed26e1c42d511e8e9a33f4c504fa",
       "license": "Apache-2.0",
-      "copyright": "2026 Adam Benenson",
-      "transformation": "Package imports and namespaces adapted to shared FiniteMarkovKernels.ProbabilityVector; probability-vector extensions retain their type namespace; main-result references and generated extensionality documentation corrected; proof statements and bodies preserved."
+      "copyright": "2026 Adam Benenson"
     },
     {
-      "source_file": "MathlibExtensions/InformationTheory/Finite/RelativeEntropy/GibbsVariational.lean",
-      "original_sha256": "589fed264aa71f678b5df04fbf75a0f8a29fce2efaa3825de3beb272783d5312",
       "extracted_file": "FiniteRelativeEntropy/GibbsVariational.lean",
       "extracted_sha256": "1b734641a65585f93562a67c87dedd7017770822cfeae657c3e7a7a0ea488d44",
       "license": "Apache-2.0",
-      "copyright": "2026 Adam Benenson",
-      "transformation": "Package imports and namespaces adapted to shared FiniteMarkovKernels.ProbabilityVector; probability-vector extensions retain their type namespace; documentation corrected; Gibbs feasibility lemma added."
+      "copyright": "2026 Adam Benenson"
     },
     {
-      "source_file": "MathlibExtensions/InformationTheory/Finite/RelativeEntropy/Characterization.lean",
-      "original_sha256": "94da36d5aa2166f0557c82cd57fa8d608ae8adafc6643d134d11f6497b8493d8",
       "extracted_file": "FiniteRelativeEntropy/Characterization.lean",
       "extracted_sha256": "9eb075bd0deb457f5e217b989b749814df84bcbab0ab96bcafd475d5d985220a",
       "license": "Apache-2.0",
-      "copyright": "2026 Adam Benenson",
-      "transformation": "Package imports and namespaces adapted to shared FiniteMarkovKernels.ProbabilityVector; probability-vector extensions retain their type namespace; theorem content preserved."
+      "copyright": "2026 Adam Benenson"
     }
-  ]
+  ],
+  "inventory_scope": "Initial public package file paths and SHA-256 digests. Later source revisions are recorded in Git history; these digests describe the initial public adaptation."
 }
