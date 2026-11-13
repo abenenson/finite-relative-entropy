@@ -38,3 +38,9 @@ its original reference. Checked examples and build/verification infrastructure
 are new package consumers. The original proof hypotheses are retained. Git
 history and qualification source hashes record the final released form; the
 initial public file hashes in `ORIGIN.json` identify the package baseline.
+
+## Current compatibility pin
+
+The supported pair is now Lean 4.35.0 / Mathlib
+`56a005855ea17e0b0958f73ec801ae140b0a1679`. The comparison above remains historical;
+this compatibility change preserves theorem statements and does not claim upstream acceptance.
