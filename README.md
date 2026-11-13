@@ -51,12 +51,12 @@ prove attainment and uniqueness, preservation of excluded support, and the
 characterization at a boundary pair. Import `FiniteRelativeEntropyExamples` to
 use them.
 
-Pinned toolchain: **Lean 4.34.1**, **Mathlib
-`d13f23b723b8a846827a245b89c10fc7d3f11612`**. All direct and transitive
+Pinned toolchain: **Lean 4.35.0**, **Mathlib
+`56a005855ea17e0b0958f73ec801ae140b0a1679`**. All direct and transitive
 dependencies are exact-pinned in [lake-manifest.json](lake-manifest.json).
 
 ```bash
-lake exe cache get
+python3 scripts/fetch_mathlib_cache.py
 lake --rehash --wfail build
 python3 -m unittest discover -s scripts -p 'test_*.py'
 python3 scripts/verify.py
@@ -77,3 +77,5 @@ These are classical mathematical results. The characterization follows Tom
 Leinster, *A short characterization of relative entropy* (2019), Theorem II.1;
 the package makes no priority claim. Apache 2.0, copyright 2026 Adam Benenson.
 See [LICENSE](LICENSE), [NOTICE](NOTICE), and [initial public file inventory](ORIGIN.json).
+
+The fresh [compatibility qualification](docs/compatibility-qualification.json) records this pair.

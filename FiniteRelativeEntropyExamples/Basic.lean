@@ -3,7 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteRelativeEntropy
+module
+
+public import FiniteRelativeEntropy
 
 /-!
 # Exact boundary and Gibbs examples
@@ -13,6 +15,8 @@ against a fair coin has KL equal to `log 2`. Exponential tilting of a fair coin 
 `0` and `log 3` gives masses `3/4` and `1/4`; the Gibbs equality characterizes this law.
 The characterization example also includes a zero numerator coordinate.
 -/
+
+@[expose] public section
 
 namespace FiniteRelativeEntropy.Examples
 

@@ -3,7 +3,9 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import FiniteRelativeEntropy.Basic
+module
+
+public import FiniteRelativeEntropy.Basic
 
 /-!
 # Gibbs variational identity on a finite probability simplex
@@ -17,6 +19,8 @@ entropy-regularized objective with a KL regret against that tilt.
 - `finiteKL.gibbs_regret`: the exact finite Gibbs variational identity.
 - `finiteKL.gibbsTilt_unique_minimizer`: uniqueness of the tilted minimizer.
 -/
+
+@[expose] public section
 
 namespace FiniteMarkovKernels
 

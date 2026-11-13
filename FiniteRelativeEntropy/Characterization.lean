@@ -3,8 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.MeasureTheory.Measure.Haar.NormedSpace
-import FiniteRelativeEntropy.Basic
+module
+
+public import Mathlib.MeasureTheory.Measure.Haar.NormedSpace
+public import FiniteRelativeEntropy.Basic
 
 /-!
 # Characterization of finite relative entropy
@@ -23,6 +25,8 @@ on the diagonal, and obeys the dependent chain rule.
 - `RelativeEntropyFamily.eq_mul_finiteKL_of_fullSupport`: the doubled construction (Lemma II.5).
 - `RelativeEntropyFamily.characterization`: Leinster's characterization theorem.
 -/
+
+@[expose] public section
 
 namespace FiniteRelativeEntropy
 
@@ -485,7 +489,7 @@ private theorem fullSupportRatio_mem_Ioc {A : Type} [Fintype A]
 noncomputable def fullSupportInnerPair {A : Type} [Fintype A] (P : AdmissiblePair A)
     (hfull : P.numerator.FullSupport) (a : A) : AdmissiblePair Bool :=
   probePair (fullSupportScale P * P.numerator a / P.reference a)
-    (fullSupportRatio_mem_Ioc P hfull a)
+    (by exact fullSupportRatio_mem_Ioc P hfull a)
 
 /-- The interleaved doubled-coordinate experiment used for the full-support case. -/
 noncomputable def fullSupportCompoundPair {A : Type} [Fintype A] (P : AdmissiblePair A)

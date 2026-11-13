@@ -3,8 +3,10 @@ Copyright (c) 2026 Adam Benenson. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
-import Mathlib.InformationTheory.KullbackLeibler.Basic
-import FiniteMarkovKernels.ProbabilityVector
+module
+
+public import Mathlib.InformationTheory.KullbackLeibler.Basic
+public import FiniteMarkovKernels.ProbabilityVector
 
 /-!
 # Relative entropy on finite probability vectors
@@ -22,6 +24,8 @@ chain rule are proved directly.
 - `finiteKL.compound`: the full dependent block-composition chain rule.
 - `finiteKL.nonneg`: Gibbs' inequality on the closed finite simplex.
 -/
+
+@[expose] public section
 
 namespace FiniteRelativeEntropy
 

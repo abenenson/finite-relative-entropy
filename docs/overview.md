@@ -119,3 +119,12 @@ Lake resolves the exact dependency commits recorded in `lake-manifest.json` from
 their public GitHub repositories. Builds require no additional repository credential.
 The verifier checks the resolved dependency revisions against the pinned manifest.
 CI performs a fresh source build, full source lint, and named transitive axiom audit.
+
+## Lean 4.35 compatibility
+
+The [compatibility qualification](compatibility-qualification.json) records fresh exact-source
+builds, all 16 linters per source, and the complete named transitive axiom audit on Lean 4.35.0.
+Explicit public imports and exposed public sections preserve the exported APIs and definition
+bodies. A private proof argument in `fullSupportInnerPair` is elaborated explicitly in a proof
+block under the module system. Dependency preparation validates every locked dependency and
+requests only the focused Mathlib import closure. Earlier receipts remain historical.
