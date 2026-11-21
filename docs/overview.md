@@ -1,10 +1,12 @@
 # API and verification
 
-The mathematical domain is a finite type `A` with a `Fintype` instance. The
+The probability-vector API takes a finite type `A` with a `Fintype` instance. The
 shared `FiniteMarkovKernels.ProbabilityVector A` consists of nonnegative real
 coordinates summing to one. The structure permits zeros and therefore cannot
 exist on an empty alphabet. No separate positivity or nonempty instance is
-required when a probability vector is already supplied.
+required when a probability vector is already supplied. The native Markov-kernel
+theorem accepts finite measurable alphabets with measurable singletons, including
+input laws that are singular with respect to one another.
 
 `FiniteRelativeEntropy.AdmissiblePair A` contains two such laws and the explicit
 condition `∀ a, reference a = 0 → numerator a = 0`. This restricts the domain to
@@ -18,8 +20,17 @@ reference support are outside this domain.
 | `FiniteRelativeEntropy.Basic` | `AdmissiblePair`, `AdmissibleReference`, `finiteKL`; diagonal, relabeling, dependent chain rule, measurability, nonnegativity, equality to zero, Mathlib KL bridge |
 | `FiniteRelativeEntropy.GibbsVariational` | Partition function, normalized Gibbs tilt, support preservation, admissibility, exact regret identity, unique minimizer |
 | `FiniteRelativeEntropy.Characterization` | `RelativeEntropyFamily`, its KL instance, global scalar characterization, optional nonnegative scalar theorem |
-| `FiniteRelativeEntropy` | All three modules |
-| `FiniteRelativeEntropyExamples` | Exact boundary and nonconstant Gibbs consumers |
+| `FiniteRelativeEntropy.StrongDataProcessing` | Strong contraction under native finite Markov kernels and under the maximum pairwise row total variation of a stochastic matrix |
+| `FiniteRelativeEntropy` | Complete library |
+| `FiniteRelativeEntropyExamples` | Boundary KL, nonconstant Gibbs, a binary symmetric channel and a constant channel on singular inputs |
+
+`finiteKL.applyKernel_le_rowContractionCoefficient` takes an `AdmissiblePair`
+and a `FiniteMarkovKernel` from the shared vector API. Its conclusion uses the
+kernel's own coefficient. For native Mathlib kernels,
+`FiniteRelativeEntropy.klDiv_comp_le_of_row_oscillation` takes an upper bound
+`η ≥ 0` on the difference between any two rows' probabilities of the same
+measurable event. The result uses `ENNReal` throughout, so it also covers
+`0 * ∞ = 0`. [Measure interface](../FiniteRelativeEntropy/StrongDataProcessing/Measure.lean) · [Vector interface](../FiniteRelativeEntropy/StrongDataProcessing/ProbabilityVector.lean)
 
 The extensions `toMeasure`, `partitionFunction`, and `gibbsTilt` belong to
 `FiniteMarkovKernels.ProbabilityVector`, the namespace that owns the shared
@@ -122,9 +133,10 @@ CI performs a fresh source build, full source lint, and named transitive axiom a
 
 ## Lean 4.35 compatibility
 
-The [compatibility qualification](compatibility-qualification.json) records fresh exact-source
-builds, all 16 linters per source, and the complete named transitive axiom audit on Lean 4.35.0.
+The v0.1.0 port's six sources passed exact builds and all 16 linters on Lean 4.35.0.
+The axiom audit at that revision covered 74 named declarations. [Port receipt](compatibility-qualification.json)
 Explicit public imports and exposed public sections preserve the exported APIs and definition
 bodies. A private proof argument in `fullSupportInnerPair` is elaborated explicitly in a proof
 block under the module system. Dependency preparation validates every locked dependency and
-requests only the focused Mathlib import closure. Earlier receipts remain historical.
+requests only the focused Mathlib import closure. The workflow publishes the source hashes,
+lint results and axiom ledger for each checked revision. [Verification runs](https://github.com/abenenson/finite-relative-entropy/actions/workflows/lean.yml)

@@ -8,13 +8,14 @@ module
 public import FiniteRelativeEntropy.Basic
 public import FiniteRelativeEntropy.GibbsVariational
 public import FiniteRelativeEntropy.Characterization
+public import FiniteRelativeEntropy.StrongDataProcessing
 
 /-!
-# Finite relative entropy and Gibbs variational identities
+# Finite relative entropy
 
-Public import for finite KL on absolutely continuous probability pairs, its Gibbs variational
-identity and minimizer, and Leinster's characterization. The shared finite probability type
-comes from `FiniteMarkovKernels`; no the library or selection interface is imported.
+Public import for finite KL on absolutely continuous probability pairs, the Gibbs variational
+identity, Leinster's characterization, and strong contraction under finite Markov kernels.
+The shared finite probability type comes from `FiniteMarkovKernels`.
 -/
 
 @[expose] public section
