@@ -2,8 +2,8 @@
 
 [![Lean verification](https://github.com/abenenson/finite-relative-entropy/actions/workflows/lean.yml/badge.svg?branch=main)](https://github.com/abenenson/finite-relative-entropy/actions/workflows/lean.yml)
 
-Finite Kullback–Leibler divergence, Gibbs variational identities, and Leinster's
-characterization of relative entropy in Lean and Mathlib.
+Finite Kullback–Leibler divergence, strong data processing, Gibbs variational
+identities, and Leinster's characterization of relative entropy in Lean and Mathlib.
 
 The library uses the closed finite probability simplex from
 [finite-markov-kernels](https://github.com/abenenson/finite-markov-kernels).
@@ -25,6 +25,11 @@ The public API proves:
   zero on the diagonal, and satisfies the full dependent chain rule is one common
   real scalar multiple of KL. The scalar is nonnegative when the family is
   separately assumed pointwise nonnegative.
+- **Strong data processing.** A finite channel with maximum row total variation
+  `δ` sends two distributions to outputs with KL at most `δ` times their input KL.
+  The vector theorem uses the existing `rowContractionCoefficient`. The measure
+  theorem accepts any upper bound on row-event differences and includes singular
+  inputs and coefficient zero. [Focused import](FiniteRelativeEntropy/StrongDataProcessing.lean)
 
 ```lean
 import FiniteRelativeEntropy
@@ -50,6 +55,11 @@ and compute a nonconstant Gibbs tilt with probabilities `3/4` and `1/4`. They
 prove attainment and uniqueness, preservation of excluded support, and the
 characterization at a boundary pair. Import `FiniteRelativeEntropyExamples` to
 use them.
+
+A second example proves that the binary channel that flips each bit with probability
+`1/4` bounds output KL by half of input KL. Its two rows differ by exactly `1/2`
+on a singleton event. A constant channel sends opposite point masses of infinite
+KL to identical laws. [Checked channel examples](FiniteRelativeEntropyExamples/StrongDataProcessing.lean)
 
 Pinned toolchain: **Lean 4.35.0**, **Mathlib
 `56a005855ea17e0b0958f73ec801ae140b0a1679`**. All direct and transitive
@@ -78,4 +88,5 @@ Leinster, *A short characterization of relative entropy* (2019), Theorem II.1;
 the package makes no priority claim. Apache 2.0, copyright 2026 Adam Benenson.
 See [LICENSE](LICENSE), [NOTICE](NOTICE), and [initial public file inventory](ORIGIN.json).
 
-The fresh [compatibility qualification](docs/compatibility-qualification.json) records this pair.
+The v0.1.0 port qualified six source modules and 74 named declarations on Lean 4.35.0.
+The current workflow writes a per-revision verification report. [Port receipt](docs/compatibility-qualification.json) · [Verification runs](https://github.com/abenenson/finite-relative-entropy/actions/workflows/lean.yml)
