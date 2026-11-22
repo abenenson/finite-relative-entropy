@@ -6,6 +6,7 @@ Authors: Adam Benenson
 module
 
 public import FiniteRelativeEntropyExamples.Basic
+public import FiniteRelativeEntropyExamples.CensoredGeometric
 public import FiniteRelativeEntropyExamples.StrongDataProcessing
 
 /-! # Checked consumers of finite relative entropy -/

@@ -54,3 +54,22 @@ grid containing the input and output likelihood ratios and one. A convex generat
 on that grid with an affine function plus nonnegative weighted positive-part functions.
 Their centered discrepancies contract by the row bound. ATLAS lists the corresponding
 measure-level statement using its own total-variation coefficient. [ATLAS statement](https://github.com/facebookresearch/atlas-lean/blob/6c7ff430b78648c8f8f1a447345d07b1fe88adb8/WantedExt/InformationTheory/StrongDataProcessingWanted.lean#L46)
+
+### Censored geometric waiting times
+
+The pinned Mathlib owns `ProbabilityTheory.geometricMeasure`, the geometric
+law counting failures before the first success. Matthew W. Horn's Mathlib
+proposals specify the head and tail masses and the pushforward onto `ℕ` under
+`min · n`. Both proposals are open as of November 22, 2026. The finite entropy
+API uses an explicit tail outcome. Encoding a recorded failure count as itself
+and the tail as `n` gives the same observation map as `min · n`.
+[Mathlib geometric law](https://github.com/leanprover-community/mathlib4/blob/56a005855ea17e0b0958f73ec801ae140b0a1679/Mathlib/Probability/Distributions/Geometric.lean) · [Head and tail masses](https://github.com/leanprover-community/mathlib4/pull/45786) · [Censored law](https://github.com/leanprover-community/mathlib4/pull/42381)
+
+Horn's Overload library independently models a capped retry by the index of
+the last attempted operation. It uses a failure-probability parameter and
+records `min K n` for a cap of `n + 1` attempts, where `K` is the number of
+failures before the first success. The checked example here separately records
+a timeout after two failures. The probability proposals and the retry model
+provide context for the observation law. The package proves the exact
+entropy loss as a geometric instance of the classical KL chain rule.
+[Overload retry model](https://github.com/matt-w-horn/overload/blob/c45ea847cbde02e295fabae673e972607090e588/Overload/Retry/AttemptDist.lean#L41)
