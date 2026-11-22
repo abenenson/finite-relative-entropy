@@ -3,7 +3,8 @@
 [![Lean verification](https://github.com/abenenson/finite-relative-entropy/actions/workflows/lean.yml/badge.svg?branch=main)](https://github.com/abenenson/finite-relative-entropy/actions/workflows/lean.yml)
 
 Finite Kullback–Leibler divergence, strong data processing, Gibbs variational
-identities, and Leinster's characterization of relative entropy in Lean and Mathlib.
+identities, Leinster's characterization of relative entropy, and exact KL loss
+for censored geometric waiting times in Lean and Mathlib.
 
 The library uses the closed finite probability simplex from
 [finite-markov-kernels](https://github.com/abenenson/finite-markov-kernels).
@@ -30,6 +31,10 @@ The public API proves:
   The vector theorem uses the existing `rowContractionCoefficient`. The measure
   theorem accepts any upper bound on row-event differences and includes singular
   inputs and coefficient zero. [Focused import](FiniteRelativeEntropy/StrongDataProcessing.lean)
+- **Censored geometric waiting times.** A cap of `n` attempts records the failure
+  count before a success or a visible timeout after all `n` attempts fail.
+  For success hazards `p, q ∈ (0, 1)`, the lost KL is exactly `(1 - p)^n` times
+  the KL of the uncapped laws. [Focused import](FiniteRelativeEntropy/CensoredGeometric.lean)
 
 ```lean
 import FiniteRelativeEntropy
@@ -60,6 +65,11 @@ A second example proves that the binary channel that flips each bit with probabi
 `1/4` bounds output KL by half of input KL. Its two rows differ by exactly `1/2`
 on a singleton event. A constant channel sends opposite point masses of infinite
 KL to identical laws. [Checked channel examples](FiniteRelativeEntropyExamples/StrongDataProcessing.lean)
+
+The capped retry example computes the second-attempt success and timeout
+probabilities and proves an exact KL loss of `log 2 / 18` for a two-attempt cap
+with success hazards `2/3` and `1/3`. The examples also cover zero attempts and
+equal hazards. [Checked retry examples](FiniteRelativeEntropyExamples/CensoredGeometric.lean)
 
 Pinned toolchain: **Lean 4.35.0**, **Mathlib
 `56a005855ea17e0b0958f73ec801ae140b0a1679`**. All direct and transitive

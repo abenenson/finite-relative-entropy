@@ -21,8 +21,9 @@ reference support are outside this domain.
 | `FiniteRelativeEntropy.GibbsVariational` | Partition function, normalized Gibbs tilt, support preservation, admissibility, exact regret identity, unique minimizer |
 | `FiniteRelativeEntropy.Characterization` | `RelativeEntropyFamily`, its KL instance, global scalar characterization, optional nonnegative scalar theorem |
 | `FiniteRelativeEntropy.StrongDataProcessing` | Strong contraction under native finite Markov kernels and under the maximum pairwise row total variation of a stochastic matrix |
+| `FiniteRelativeEntropy.CensoredGeometric` | Censoring map, finite law, pushforward equality, and exact KL loss for interior geometric hazards |
 | `FiniteRelativeEntropy` | Complete library |
-| `FiniteRelativeEntropyExamples` | Boundary KL, nonconstant Gibbs, a binary symmetric channel and a constant channel on singular inputs |
+| `FiniteRelativeEntropyExamples` | Boundary KL, nonconstant Gibbs, a binary symmetric channel, a constant channel on singular inputs, and capped retry |
 
 `finiteKL.applyKernel_le_rowContractionCoefficient` takes an `AdmissiblePair`
 and a `FiniteMarkovKernel` from the shared vector API. Its conclusion uses the
@@ -57,6 +58,16 @@ with measurable singletons. It proves that Mathlib's KL is finite on an
 admissible pair and its `toReal` equals `finiteKL`. Probability-vector equality
 is recovered from singleton masses. The Gibbs and characterization APIs
 themselves require no measurable-space instance on the alphabet.
+
+`CensoredWaitingTime n` is `Fin n ⊕ PUnit`. A success on attempt `k + 1`
+is recorded as `Sum.inl k` when `k < n`, and `Sum.inr PUnit.unit` records
+all `n` attempts failing. The finite law's induced measure is the pushforward
+of Mathlib's `geometricMeasure p` along `CensoredWaitingTime.censor n`.
+For a positive success hazard, the tail has mass `(1 - p)^n`. At hazard zero
+the pushforward inherits Mathlib's point mass at zero convention. For two
+interior hazards the full KL is finite. The loss theorem is available for the
+finite vector KL and for Mathlib's KL on the pushforward measures.
+[Observation and loss theorems](../FiniteRelativeEntropy/CensoredGeometric.lean)
 
 ## Reproducible verification
 
