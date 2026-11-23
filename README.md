@@ -100,3 +100,13 @@ See [LICENSE](LICENSE), [NOTICE](NOTICE), and [initial public file inventory](OR
 
 The v0.1.0 port qualified six source modules and 74 named declarations on Lean 4.35.0.
 The current workflow writes a per-revision verification report. [Port receipt](docs/compatibility-qualification.json) · [Verification runs](https://github.com/abenenson/finite-relative-entropy/actions/workflows/lean.yml)
+
+## Releases and related libraries
+
+Start with the [`v0.2.0` release](https://github.com/abenenson/finite-relative-entropy/releases/tag/v0.2.0) for the supported toolchain and verification run.
+
+- [finite-markov-kernels](https://github.com/abenenson/finite-markov-kernels) covers finite kernels and total variation.
+- [finite-causal-control](https://github.com/abenenson/finite-causal-control) covers entropy-regularized control.
+- [channel-capacity](https://github.com/abenenson/channel-capacity) covers uniqueness of capacity-achieving input priors.
+
+[Browse the Lean library index](https://adambenenson.com/projects/#formal-methods).

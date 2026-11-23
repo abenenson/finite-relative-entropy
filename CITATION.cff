@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: If you use this software, cite it and include the tag or commit used.
+title: Finite Relative Entropy
+type: software
+authors:
+- family-names: Benenson
+  given-names: Adam
+license: Apache-2.0
+repository-code: https://github.com/abenenson/finite-relative-entropy
+url: https://github.com/abenenson/finite-relative-entropy/releases/tag/v0.2.0
+version: 0.2.0
